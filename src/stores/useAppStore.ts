@@ -14,18 +14,18 @@ import {
 
 export const DEFAULT_FILL: FillStyle = {
   type: 'solid',
-  color: '#ffffff',
+  color: '#0f172a', // Dark charcoal/slate for clear visibility
   gradientAngle: 90,
   stops: [
-    { id: '1', color: '#3b82f6', offset: 0 },
-    { id: '2', color: '#8b5cf6', offset: 1 },
+    { id: '1', color: '#2563eb', offset: 0 },
+    { id: '2', color: '#7c3aed', offset: 1 },
   ],
 };
 
 export const DEFAULT_STROKE: StrokeStyle = {
   enabled: true,
-  color: '#000000',
-  width: 8,
+  color: '#ffffff', // White stroke for contrast
+  width: 6,
   opacity: 1,
 };
 
@@ -96,6 +96,14 @@ export const BUILTIN_PRESETS: StylePreset[] = [
     fill: { type: 'solid', color: '#FFFFFF', gradientAngle: 90, stops: [] },
     stroke: { enabled: true, color: '#000000', width: 12, opacity: 1 },
     shadow: { enabled: true, color: '#000000', offsetX: 6, offsetY: 6, blur: 8, opacity: 0.6 },
+    glow: { enabled: false, color: '#000000', blur: 0, strength: 1 },
+  },
+  {
+    id: 'dark-contrast',
+    name: 'Dark Slate & White Border',
+    fill: { type: 'solid', color: '#0f172a', gradientAngle: 90, stops: [] },
+    stroke: { enabled: true, color: '#ffffff', width: 8, opacity: 1 },
+    shadow: { enabled: true, color: '#000000', offsetX: 4, offsetY: 4, blur: 6, opacity: 0.4 },
     glow: { enabled: false, color: '#000000', blur: 0, strength: 1 },
   },
   {
